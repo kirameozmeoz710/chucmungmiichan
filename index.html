@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#132b55">
+<meta name="description" content="Một khu vườn hoa sữa nhỏ, những lá thư và lời chúc dịu dàng dành riêng cho ngày 20/10.">
+<title>Gửi cậu — một khu vườn tháng Mười ♡</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="sky" aria-hidden="true"></canvas>
+<div class="ambient ambient-a"></div><div class="ambient ambient-b"></div>
+<main>
+  <section id="welcome" class="welcome screen">
+    <div class="intro-art" aria-hidden="true">
+      <div class="intro-moon"></div><span class="spark s1">✦</span><span class="spark s2">✧</span><span class="spark s3">✦</span>
+      <div class="intro-branch">✿　❀　✿</div>
+    </div>
+    <div class="welcome-content">
+      <div class="overline"><span>✿</span> A LITTLE GIFT FOR YOU <span>✿</span></div>
+      <h1>Gửi cậu,<br><em>một chút dịu dàng</em></h1>
+      <p class="lead">Có một khu vườn nhỏ chỉ mở cửa cho người trả lời đúng ba câu hỏi.<br>Đi cùng mình một chút nhé?</p>
+      <div class="quiz-shell">
+        <div class="quiz-top"><span id="stepLabel">CÂU HỎI 01 / 03</span><span class="tiny-heart">♡</span></div>
+        <div class="progress"><span id="progress"></span></div>
+        <h2 id="question">Ngày 20/10 là dịp gì ở Việt Nam?</h2>
+        <div id="answers" class="answers"></div>
+        <div class="quiz-bottom"><span id="feedback" aria-live="polite">Chọn câu trả lời của cậu nhé.</span><span class="flower-mark">❀</span></div>
+      </div>
+      <div class="footnote">một điều nhỏ xíu, được chuẩn bị bằng cả tấm lòng <span>♡</span></div>
+    </div>
+  </section>
+
+  <section id="garden" class="garden screen hidden">
+    <div class="garden-nav"><span class="brand-mark">✿</span><span>THE OCTOBER GARDEN</span><span class="nav-heart">♡</span></div>
+    <header class="garden-heading">
+      <p class="overline">20 THÁNG 10 · DÀNH RIÊNG CHO CẬU</p>
+      <h1>Mùa hoa sữa <em>và những lời thương</em></h1>
+      <p>Những lá thư nho nhỏ đang đợi cậu chạm vào.</p>
+    </header>
+    <div class="scene">
+      <div class="scene-sky"></div>
+      <div class="moon"></div>
+      <div class="distant-lights"></div>
+      <div class="tree-art" aria-label="Cây hoa sữa đang nở hoa">
+        <img src="assets/hoa-sua-garden.jpg" alt="Minh họa cây hoa sữa nở hoa trong đêm trăng" class="tree-image">
+        <div class="tree-vignette"></div>
+        <div id="letterLayer" class="letter-layer"></div>
+        <button id="gift" class="gift-hotspot" aria-label="Mở hộp quà dưới gốc cây">
+          <span class="gift-pulse"></span><span class="gift-hint">mở món quà ♡</span>
+        </button>
+      </div>
+      <div class="scene-caption"><span>✧</span> Hãy chạm vào từng lá thư <span>✧</span></div>
+    </div>
+    <footer class="garden-footer">Dù hôm nay hay những ngày bình thường, mong cậu luôn được yêu thương. <span>♡</span></footer>
+  </section>
+</main>
+
+<div id="letterDialog" class="overlay hidden" role="dialog" aria-modal="true" aria-labelledby="letterTitle">
+  <div class="letter-modal paper">
+    <button class="x-close" data-close="letterDialog" aria-label="Đóng">×</button>
+    <div class="seal-big">✿</div><div class="modal-kicker">A LETTER, JUST FOR YOU</div>
+    <h2 id="letterTitle">Một lời nhắn nhỏ</h2><div class="ornament">— ✧ —</div>
+    <p id="letterBody"></p><div class="signature">Gửi cậu bằng tất cả sự dịu dàng <span>♡</span></div>
+    <div class="modal-count" id="letterCount"></div>
+  </div>
+</div>
+<div id="giftDialog" class="overlay hidden" role="dialog" aria-modal="true" aria-labelledby="giftTitle">
+  <div class="gift-modal paper">
+    <button class="x-close" data-close="giftDialog" aria-label="Đóng">×</button>
+    <div class="gift-illustration">🎁</div><div class="modal-kicker">A LITTLE TREASURE</div>
+    <h2 id="giftTitle">Điều cuối cùng mình muốn nói</h2><div class="ornament">— ♡ —</div>
+    <p id="giftBody"></p>
+    <button id="closeGift" class="pill-button">Cất lời chúc vào tim <span>♡</span></button>
+  </div>
+</div>
+<div id="endDialog" class="overlay hidden" role="dialog" aria-modal="true">
+  <div class="paper end-card"><div class="seal-big">♡</div><h2>Hẹn cậu ở một ngày thật đẹp</h2><p>Cảm ơn cậu đã ghé thăm khu vườn nhỏ này.</p><button id="endButton" class="pill-button">Khép khu vườn</button></div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
